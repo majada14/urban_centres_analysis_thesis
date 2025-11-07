@@ -1,0 +1,21 @@
+administration: |
+  [out:json];
+  (node["amenity"~"post_office|payment_centre|police|townhall"](around:10000, 44.494887, 11.3426163);
+  node["building"~"public|government"](around:10000, 44.494887, 11.3426163););
+  out center;
+
+education: |
+  [out:json];
+  (area["amenity"~"kindergarten|school"](around:10000, 44.494887, 11.3426163););
+  out center;
+
+healthcare: |
+  [out:json];
+  (node["amenity"~"pharmacy|clinic|doctors|dentist"](around:10000, 44.494887, 11.3426163););
+  out center;
+
+recreation: |
+  [out:json];
+  (node["leisure"~"fitness_centre|sports_centre|sports_hall"](around:10000, 44.494887, 11.3426163);
+  node["amenity"~"arts_centre|theatre|cinema|exhibition_centre|music_venue|stage|community_centre|social_facility"](around:10000, 44.494887, 11.3426163););
+  out center;
